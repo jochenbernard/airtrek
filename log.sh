@@ -6,7 +6,7 @@ sleep 1
 
 osascript findMy.scpt
 
-sleep 7
+sleep 15
 
 npm run log
 
