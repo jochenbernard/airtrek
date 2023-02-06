@@ -8,25 +8,25 @@ const bikeFile = "/Users/jochenbernard/.bike.json";
 const data = JSON.parse(fs.readFileSync(itemsFile, "utf8"));
 const bikeData = JSON.parse(fs.readFileSync(bikeFile, "utf8"));
 
-const bike = data.filter((item) => item.name === "Jochen’s Bike");
+const bike = data.filter((item) => item.name === "Jochen’s Bike")[0];
 
-const timeStamp = bike[0].location.timeStamp;
+const timeStamp = bike.location.timeStamp;
 
 if (bikeData.some((item) => item.timeStamp === timeStamp)) {
   console.log(timeStamp);
   exit();
 }
 
-const address = bike[0].address.formattedAddressLines.join("\n");
+const address = bike.address?.formattedAddressLines.join("\n");
 
-const latitude = bike[0].location.latitude;
-const longitude = bike[0].location.longitude;
+const latitude = bike.location.latitude;
+const longitude = bike.location.longitude;
 
-const horizontalAccuracy = bike[0].location.horizontalAccuracy;
-const verticalAccuracy = bike[0].location.verticalAccuracy;
+const horizontalAccuracy = bike.location.horizontalAccuracy;
+const verticalAccuracy = bike.location.verticalAccuracy;
 
-const floorLevel = bike[0].location.floorLevel;
-const altitude = bike[0].location.altitude;
+const floorLevel = bike.location.floorLevel;
+const altitude = bike.location.altitude;
 
 const location = {
   timeStamp,
