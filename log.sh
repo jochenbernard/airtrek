@@ -8,6 +8,6 @@ osascript findMy.scpt
 
 sleep 7
 
-node .
+npm run log
 
 osascript -e 'quit app "FindMy"'

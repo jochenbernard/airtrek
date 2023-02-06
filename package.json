@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "log": "node log.js",
+    "map": "node map.js"
   }
 }
