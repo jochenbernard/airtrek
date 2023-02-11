@@ -8,6 +8,6 @@ osascript findMy.scpt
 
 sleep 15
 
-npm run log
+/opt/homebrew/bin/node log.js
 
 osascript -e 'quit app "FindMy"'
