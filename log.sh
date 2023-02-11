@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 open -g /System/Applications/FindMy.app
 
